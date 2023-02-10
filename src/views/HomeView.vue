@@ -1,8 +1,10 @@
 <template>
   <v-app>
     <v-app-bar color="" dense dark />
+    
     <v-main style="--v-layout-left: 50px; --v-layout-right: 50px; --v-layout-top: 100px; --v-layout-bottom: 0px;">
-      <v-container>
+      
+      <v-container><v-toolbar-title class="title text-center display-3 text-h4">ข่าวสาร</v-toolbar-title><br>
         <v-row>
           <v-col cols="12" sm="6" md="4" v-for="news_content in news" :key="news_content.newsId">
             <v-card class="mx-4" max-width="400" height="400">

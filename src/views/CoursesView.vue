@@ -8,7 +8,7 @@
         --v-layout-top: 100px;
         --v-layout-bottom: 0px;
       "
-    >
+    > <v-toolbar-title class="title text-center display-3 text-h4">รายวิชา</v-toolbar-title><br>
       <v-container fluid>
         <v-row>
           <v-col cols="4" v-for="(course, index) in courses" :key="index">

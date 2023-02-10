@@ -4,18 +4,19 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <v-app>
-    <v-app-bar color="#379237" dense dark>
+    <v-app-bar color="#DDDDDD" dense dark>
       <v-spacer></v-spacer> <v-spacer></v-spacer>
-      <v-btn small elevation="" color="">
+      <v-btn variant="flat"
+      >
         <RouterLink to="/">หน้าแรก</RouterLink></v-btn
       > <v-spacer></v-spacer>
-      <v-btn small elevation="" color="">
+      <v-btn variant="flat" small elevation="" color="">
         <RouterLink to="/courses">รายวิชา</RouterLink></v-btn
       > <v-spacer></v-spacer>
-      <v-btn small elevation="" color="">
+      <v-btn  variant="flat" small elevation="" color="">
         <RouterLink to="/enrollments">ลงทะเบียนเรียน</RouterLink></v-btn
       > <v-spacer></v-spacer>
-      <v-btn small elevation="" color="">
+      <v-btn variant="flat" small elevation="" color="">
         <RouterLink to="/mycourse">วิชาที่ฉันลงทะเบียน</RouterLink></v-btn
       ><v-spacer></v-spacer> <v-spacer></v-spacer>
     </v-app-bar>

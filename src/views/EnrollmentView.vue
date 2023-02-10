@@ -73,11 +73,8 @@
 import { ref } from "vue";
 import courseData from "../json/cs_courses.json";
 import { useEnrollment } from "../stores/useEnrollment";
-import { inEnrollment } from "../stores/inEnrollment";
-import { storeToRefs } from "pinia";
 
-const {theme} = storeToRefs(inEnrollment);
-const {inenroll}=inEnrollment();
+
 const enrollment = useEnrollment();
 
 //const enrollmentList = inEnrollment();
