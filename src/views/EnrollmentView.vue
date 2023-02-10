@@ -1,5 +1,5 @@
 <template>
-  <v-app
+  <v-app :theme="theme"
     ><v-app-bar color="" dense dark> </v-app-bar
     ><v-main
       style="
@@ -16,7 +16,7 @@
           v-model="courseID"
           placeholder="รหัสวิชา"
         ></v-text-field>
-        <v-btn type="submit" block class="mt-2">ลงทะเบียน</v-btn>
+        <v-btn color="green" @click="inenroll" type="submit" block class="mt-2" a>ลงทะเบียน</v-btn>
       </v-form>
       <br>
       <v-card
@@ -44,7 +44,7 @@
       <br>
       <v-divider></v-divider>
       <div>
-        <v-card-title primary-title>รายวิชารอยืนยัน</v-card-title>
+        <v-card-title primary-title>รายวิชา</v-card-title>
         <v-table>
           <thead>
             <tr>
@@ -58,12 +58,13 @@
               <td>{{ course.course_id }}</td>
               <td>{{ course.course_name }}</td>
               <td>{{ course.credit }}</td>
-              <td><v-btn @click="removeFromBasket(index)">ลบ</v-btn></td>
+              <td><v-btn color="error" @click="removeFromBasket(index)">ลบ</v-btn></td>
             </tr>
           </tbody>
         </v-table>
         <v-divider></v-divider>
-        <v-btn @click="enrollCourse">ยืนยันการลงทะเบียน</v-btn>
+        <br>
+        <v-btn color="blue" @click="enrollCourse">ยืนยันการลงทะเบียน</v-btn>
       </div>
     </v-main></v-app
   >
@@ -72,9 +73,13 @@
 import { ref } from "vue";
 import courseData from "../json/cs_courses.json";
 import { useEnrollment } from "../stores/useEnrollment";
-//import { inEnrollment } from "../stores/inEnrollment";
+import { inEnrollment } from "../stores/inEnrollment";
+import { storeToRefs } from "pinia";
 
+const {theme} = storeToRefs(inEnrollment);
+const {inenroll}=inEnrollment();
 const enrollment = useEnrollment();
+
 //const enrollmentList = inEnrollment();
 //const courseInfo = enrollmentList.getState;
 

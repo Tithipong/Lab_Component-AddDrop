@@ -4,9 +4,9 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <v-app>
-    <v-app-bar color="" dense dark>
+    <v-app-bar color="#379237" dense dark>
       <v-spacer></v-spacer> <v-spacer></v-spacer>
-      <v-btn small elevation="" color="dark">
+      <v-btn small elevation="" color="">
         <RouterLink to="/">หน้าแรก</RouterLink></v-btn
       > <v-spacer></v-spacer>
       <v-btn small elevation="" color="">

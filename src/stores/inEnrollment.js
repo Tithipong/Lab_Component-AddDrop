@@ -1,12 +1,12 @@
 import { defineStore } from "pinia";
 import { ref, computed } from "vue";
 
-export const inEnrollment = defineStore("enrollment", () => {
-  const enrollment = ref([]);
+export const inEnrollment = defineStore("inenrollment", () => {
+  const inenrollment = ref([]);
 
-  const getState = computed(() => enrollment.value);
+  const getState = computed(() => inenrollment.value);
   function storeState(state) {
-    enrollment.value.push(state);
+    inenrollment.value.push(state);
   }
-  return { enrollment, getState, storeState };
+  return { inenrollment, getState, storeState };
 });
